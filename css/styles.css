@@ -1,0 +1,444 @@
+/* Global Styles */
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+:root {
+    --bg-color: #131313;
+    --theme-hover: #c3baab20;
+    --card-color: #A63EC5;
+    --text-color: #e7e7e7;
+}
+
+.light-theme {
+    --bg-color: #c3baab;
+    --theme-hover: #13131320;
+    --card-color: #d4708e;
+    --text-color: #131313;
+}
+
+html {
+    font-family: 'share-tech-mono', monospace;
+    font-size: 12px;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: var(--text-color);
+    background-color: var(--bg-color);
+}
+
+a {
+    text-decoration: none;
+    color: rgb(3, 155, 155);
+}
+
+a:hover {
+    color: rgba(249, 105, 14, 1);
+}
+
+ul {
+    list-style: none;
+}
+
+p {
+    font-size: 1.4rem;
+}
+
+img {
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+}
+
+/************************CUSTOM SCROLL-BAR*****************************************/
+::-webkit-scrollbar {
+    width: 0;
+}
+
+/****************************************************************************************************/
+
+::selection {
+    color: rgb(3, 155, 155);
+    background: rgba(249, 105, 14, 1);
+}
+
+body {
+    text-align: center;
+    padding: 0 40px 30px;
+}
+
+.container-theme {
+    position: relative;
+    backdrop-filter: blur(5px);
+}
+
+#btn-theme-change {
+    position: absolute;
+    top: -63px;
+    right: -28px;
+    padding: 8px;
+    width: 64px;
+    height: auto;
+}
+
+#btn-theme-change:hover {
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+    background-color: var(--theme-hover);
+    transform: scale(1.2);
+    -webkit-transform: scale(1.1);
+    -moz-transform: scale(1.2);
+    -ms-transform: scale(1.2);
+    -o-transform: scale(1.2);
+}
+
+.container-theme svg path {
+    fill: var(--text-color);
+}
+
+
+.main-title {
+    margin-top: 70px;
+    margin-bottom: 70px;
+    font-size: 25px;
+    letter-spacing: 2.5px;
+    font-family: 'Courgette', cursive;
+}
+
+.quote-card {
+    min-width: 150px;
+    padding: 30px;
+    background-color: var(--card-color);
+    border-radius: 25px;
+    -webkit-border-radius: 25px;
+    -moz-border-radius: 25px;
+    -ms-border-radius: 25px;
+    -o-border-radius: 25px;
+}
+
+.main-quote {
+    text-align: left;
+    font-size: 20px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+    font-family: 'Merienda One', cursive;
+    padding-bottom: 10px;
+}
+
+.author-name {
+    text-align: right;
+    padding-right: 40px;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    font-family: 'Berkshire Swash', cursive;
+}
+
+.refresh-text {
+    margin: 20px 0 40px 0;
+    font-size: 20px;
+    letter-spacing: 2.5px;
+    font-family: 'Courgette', cursive;
+}
+
+.refresh-text svg {
+    margin-left: 15px;
+    animation: rotate 3s infinite;
+    -webkit-animation: rotate 3s infinite;
+}
+
+@keyframes rotate {
+    0% {
+        transform: rotate(0deg) scale(2);
+        -webkit-transform: rotate(0deg) scale(2);
+        -moz-transform: rotate(0deg) scale(2);
+        -ms-transform: rotate(0deg) scale(2);
+        -o-transform: rotate(0deg) scale(2);
+    }
+
+    100% {
+        transform: rotate(360deg) scale(2);
+        -webkit-transform: rotate(360deg) scale(2);
+        -moz-transform: rotate(360deg) scale(2);
+        -ms-transform: rotate(360deg) scale(2);
+        -o-transform: rotate(360deg) scale(2);
+    }
+}
+
+.refresh-text svg path {
+    fill: var(--text-color);
+}
+
+.footer h4 {
+    padding-top: 10px;
+    font-size: 15px;
+    letter-spacing: 1px;
+    font-family: 'Rancho', cursive;
+}
+
+/*******************************************************   TAB-STYLES  *******************************************************/
+
+@media (min-width: 600) {
+
+    body {
+        text-align: center;
+        padding: 0 80px 30px;
+    }
+
+    .container-theme {
+        position: relative;
+    }
+
+    #btn-theme-change {
+        position: absolute;
+        top: -38px;
+        right: -58px;
+    }
+
+    .main-title {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        font-size: 32px;
+        letter-spacing: 2.5px;
+    }
+
+    .quote-card {
+        min-width: 150px;
+        padding: 60px;
+    }
+
+    .main-quote {
+        text-align: left;
+        font-size: 25px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        padding-bottom: 10px;
+    }
+
+    .author-name {
+        text-align: right;
+        padding-right: 40px;
+        font-size: 20px;
+        letter-spacing: 2.5px;
+    }
+
+    .refresh-text {
+        margin: 20px 0 40px 0;
+        font-size: 30px;
+        letter-spacing: 2.5px;
+    }
+
+    .refresh-text svg {
+        margin-left: 15px;
+        animation: rotate 3s infinite;
+        -webkit-animation: rotate 3s infinite;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg) scale(3);
+            -webkit-transform: rotate(0deg) scale(3);
+            -moz-transform: rotate(0deg) scale(3);
+            -ms-transform: rotate(0deg) scale(3);
+            -o-transform: rotate(0deg) scale(3);
+        }
+
+        100% {
+            transform: rotate(360deg) scale(3);
+            -webkit-transform: rotate(360deg) scale(3);
+            -moz-transform: rotate(360deg) scale(3);
+            -ms-transform: rotate(360deg) scale(3);
+            -o-transform: rotate(360deg) scale(3);
+        }
+    }
+}
+
+/*******************************************************   PC-STYLES  *******************************************************/
+
+@media (min-width: 992px) {
+
+    body {
+        text-align: center;
+        padding: 0 200px 30px;
+    }
+
+    .container-theme {
+        position: relative;
+    }
+
+    #btn-theme-change {
+        position: absolute;
+        top: -38px;
+        right: -148px;
+    }
+
+    .main-title {
+        margin-top: 70px;
+        margin-bottom: 70px;
+        font-size: 40px;
+        letter-spacing: 2.5px;
+    }
+
+    .quote-card {
+        min-width: 150px;
+        padding: 60px;
+    }
+
+    .main-quote {
+        text-align: left;
+        font-size: 30px;
+        line-height: 1.5;
+        letter-spacing: 1px;
+        padding-bottom: 10px;
+    }
+
+    .author-name {
+        text-align: right;
+        padding-right: 40px;
+        font-size: 20px;
+        letter-spacing: 2.5px;
+    }
+
+    .refresh-text {
+        margin: 20px 0 40px 0;
+        font-size: 30px;
+        letter-spacing: 2.5px;
+    }
+
+    .refresh-text svg {
+        margin-left: 15px;
+        animation: rotate 3s infinite;
+        -webkit-animation: rotate 3s infinite;
+    }
+
+    @keyframes rotate {
+        0% {
+            transform: rotate(0deg) scale(3);
+            -webkit-transform: rotate(0deg) scale(3);
+            -moz-transform: rotate(0deg) scale(3);
+            -ms-transform: rotate(0deg) scale(3);
+            -o-transform: rotate(0deg) scale(3);
+        }
+
+        100% {
+            transform: rotate(360deg) scale(3);
+            -webkit-transform: rotate(360deg) scale(3);
+            -moz-transform: rotate(360deg) scale(3);
+            -ms-transform: rotate(360deg) scale(3);
+            -o-transform: rotate(360deg) scale(3);
+        }
+    }
+}
+
+/******************************progress-bar*******************************************************/
+
+progress[value] {
+    appearance: none;
+    border: none;
+    width: 100%;
+    height: 20px;
+    background-color: var(--bg-color);
+    border-radius: 3px;
+    box-shadow: 0 5px 3px rgb(0, 0, 0) inset;
+    color: royalblue;
+    position: relative;
+}
+
+progress[value]::-webkit-progress-bar {
+    background-color: var(--bg-color);
+    border-radius: 3px;
+    box-shadow: 0 5px 3px rgb(0, 0, 0) inset;
+}
+
+progress[value]::-webkit-progress-value {
+    position: relative;
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 3px;
+    animation: animate-stripes 5s linear infinite;
+}
+
+@keyframes animate-stripes {
+    100% {
+        background-position: -100px 0;
+    }
+}
+
+progress[value]::-webkit-progress-value:after {
+    content: '';
+    position: absolute;
+    width: 5px;
+    height: 5px;
+    top: 7px;
+    right: 7px;
+    background-color: var(--bg-color);
+    border-radius: 100%;
+}
+
+progress[value]::-moz-progress-bar {
+    background-image:
+        -moz-linear-gradient(135deg,
+            transparent,
+            transparent 33%,
+            rgba(0, 0, 0, .1) 33%,
+            rgba(0, 0, 0, .1) 66%,
+            transparent 66%),
+        -moz-linear-gradient(top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .2)),
+        -moz-linear-gradient(left, #09c, #f44);
+    background-size: 35px 20px, 100% 100%, 100% 100%;
+    border-radius: 3px;
+}
+
+.progressBar-html5::-webkit-progress-value {
+    background-image:
+        -webkit-linear-gradient(135deg,
+            transparent,
+            transparent 33%,
+            rgba(0, 0, 0, .1) 33%,
+            rgba(0, 0, 0, .1) 66%,
+            transparent 66%),
+        -webkit-linear-gradient(top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .2)),
+        -webkit-linear-gradient(left, #09c, #f44);
+}
+
+.progressBar-html5::-moz-progress-bar {
+    background-image:
+        -moz-linear-gradient(135deg,
+            transparent,
+            transparent 33%,
+            rgba(0, 0, 0, .1) 33%,
+            rgba(0, 0, 0, .1) 66%,
+            transparent 66%),
+        -moz-linear-gradient(top,
+            rgba(255, 255, 255, .25),
+            rgba(0, 0, 0, .2)),
+        -moz-linear-gradient(left, #09c, #f44);
+}
+
+#progressBar {
+    width: 60%;
+    margin: 50px 0;
+}
+
+/****************************************************************************************************/
+
+
+
+/****************************************************************************************************/
+/****************************************************************************************************/
+
+/* font-family: 'Berkshire Swash', cursive;
+font-family: 'Courgette', cursive;
+font-family: 'Merienda One', cursive;
+font-family: 'Rancho', cursive; */
