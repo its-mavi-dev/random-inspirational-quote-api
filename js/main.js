@@ -1,24 +1,25 @@
 var icon = document.getElementById("btn-theme-change");
+var classList = document.body.classList;
 localStorage.setItem("currentTheme", localStorage.getItem("currentTheme"));
 
 icon.onclick = function () {
-    document.body.classList.toggle("light-theme");
-    if (document.body.classList.contains("light-theme")) {
-        document.getElementById("btn-theme-change").src = "images/moon.png"; //light theme is on show moon icon
+    classList.toggle("light-theme");
+    if (classList.contains("light-theme")) {
+        icon.src = "images/moon.png"; //light theme is on show moon icon
         localStorage.setItem("currentTheme", "light");
     } else {
-        document.getElementById("btn-theme-change").src = "images/sun.png"; //dark theme is on show sun icon
+        icon.src = "images/sun.png"; //dark theme is on show sun icon
         localStorage.setItem("currentTheme", "dark");
     }
 }
 document.body.onload = function () {
     if (localStorage.getItem("currentTheme") === "dark") {
-        document.body.classList.remove("light-theme");
-        document.getElementById("btn-theme-change").src = "images/sun.png";
+        classList.remove("light-theme");
+        icon.src = "images/sun.png";
     }
     if (localStorage.getItem("currentTheme") === "light") {
-        document.body.classList.add("light-theme");
-        document.getElementById("btn-theme-change").src = "images/moon.png";
+        classList.add("light-theme");
+        icon.src = "images/moon.png";
     }
 }
 
@@ -48,17 +49,16 @@ function fetchLocalQuotes() {
         timeout = 0;
     }
 
-    var timeLeft = 18;
+    var timeLeft = 1980;
     var downloadTimer = setInterval(function () {
         if (timeLeft <= 0) {
             clearInterval(downloadTimer);
         }
-        document.getElementById("progressBar").value = 19 - timeLeft;
+        document.getElementById("progressBar").value = 1900 - timeLeft;
         timeLeft -= 1;
-    }, 1000);
+    }, 10);
 
     setTimeout(function () {
-
         let quoteArray = localStorage.getItem('QuotesData');
         quoteArray = JSON.parse(quoteArray);
         refresh = (quoteArray) ? Math.round(localStorage.getItem("timestamp") - (new Date().getTime() / 1000)) : 0;
