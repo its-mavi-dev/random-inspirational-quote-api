@@ -49,14 +49,14 @@ function fetchLocalQuotes() {
         timeout = 0;
     }
 
-    var timeLeft = 1980;
+    var timeLeft = 198;
     var downloadTimer = setInterval(function () {
         if (timeLeft <= 0) {
             clearInterval(downloadTimer);
         }
-        document.getElementById("progressBar").value = 1900 - timeLeft;
+        document.getElementById("progressBar").value = 190 - timeLeft;
         timeLeft -= 1;
-    }, 10);
+    }, 100);
 
     setTimeout(function () {
         let quoteArray = localStorage.getItem('QuotesData');
